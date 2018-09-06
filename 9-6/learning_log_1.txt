@@ -1,1 +1,10 @@
-#LL 
+#LL JavaScript Review
+https://www.w3schools.com/js/
+I studies some JavaScript concepts that I was not familiar with on w3schools. 
+I reviewed JS objects and how to accessing/modify object properties. 
+I learned some JS Math functions and knew some math constants to use. 
+I understood a lot more about switch statement and its execution. 
+Lastly I read about type conversion and knew to distinguish different types of data, especially with NaN, undefined and null. 
+I think I was a little confused by constructor property and how it is used for.
+According to the examples it is mostly used for checking the properties or say data type of a variable.
+I was also suprised by the automatic type conversion JavaScript would perform and I think I would take caution when coding.
