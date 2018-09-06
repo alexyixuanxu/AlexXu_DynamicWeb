@@ -1,14 +1,16 @@
 Find a compelling web app. Test it, try to find its weaknesses. Decide why you like it. Decide what you¡¯d improve upon. 
 
+If visual aid needed: https://docs.google.com/presentation/d/1cpTOHxe5aitXj8r5C9Wqr6RpbkR1dsnSJWXypehd0HA/edit?usp=sharing
+
 Netflix
-- The content are laid out in a straight-forward way:
+- The content are laid out in a straightforward way:
 	aligned images, when hover over, a clip or preview.
 - easy to navigate:
 	genres and such
 - search function:
 	a topic, e.g. fashion
 	an actor, e.g. Winona Ryder
-- different languages subtitles
+- different languages subtitles/audio
 - "more like this"
 
 To improve upon:
