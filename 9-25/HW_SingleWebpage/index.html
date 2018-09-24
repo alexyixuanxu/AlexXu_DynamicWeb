@@ -80,10 +80,10 @@ function updateDisplay(song){
   song = song.replace(/ /g, '');
   song = song.toLowerCase();
   song += '.txt';
-  var url = song;
+  var url = 'text_files/' + song;
   */
   // used regax to replace all the spaces with _
-  var url = song.replace(/ /g, '_').toLowerCase() + '.txt';
+  var url = 'text_files/' + song.replace(/ /g, '_').toLowerCase() + '.txt';
   // should show the url in console
   console.log(url);
 
