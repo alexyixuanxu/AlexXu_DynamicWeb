@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width">
     <title>Florence + the Machine Lyrics</title>
     <style>
+    /*import my font*/
+    @import url('https://fonts.googleapis.com/css?family=Caveat:400,700');
+
 		html, pre {
-		font-family: sans-serif;
+      font-family: 'Caveat', cursive;
+
 		}
 		body {
+      font-size: 18pt;
   		width: 560px;
   		margin: 0 auto;
   		background-color: #ccc;
 		}
     h1{
       text-align: middle;
+      font-weight: bold;
+      font-size: 38pt;
+      margin: 10px auto;
     }
 		pre {
   		line-height: 1.5;
@@ -99,6 +107,7 @@ function updateDisplay(song){
 
 // this function update the mv being shown according to different song chosen
 function updateVid(song){
+  // this is without using JSON
   if (song === 'Dog Days Are Over'){
     document.getElementById("mvFrame").src = "https://www.youtube.com/embed/iWOyfLBYtuU";
   }
@@ -111,7 +120,6 @@ function updateVid(song){
   else if (song === 'Hunger'){
     document.getElementById("mvFrame").src = "https://www.youtube.com/embed/5GHXEGz3PJg";
   }
-
 }
 
 // this is for aesthetic choice
