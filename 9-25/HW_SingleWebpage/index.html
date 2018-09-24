@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Florence + the Machine Lyrics</title>
+    <style>
+		html, pre {
+		font-family: sans-serif;
+		}
+		body {
+  		width: 560px;
+  		margin: 0 auto;
+  		background-color: #ccc;
+		}
+    h1{
+      text-align: middle;
+    }
+		pre {
+  		line-height: 1.5;
+  		letter-spacing: 0.05rem;
+  		padding: 1rem;
+  		background-color: white;
+		}
+
+    form{
+      margin: 10px auto;
+    }
+
+		label {
+  		width: 200px;
+  		margin-right: 33px;
+		}
+		select {
+  		width: 350px;
+  		padding: 5px;
+		}
+    </style>
+</head>
+
+<body>
+  <H1>Florence + the Machine Lyrics</H1>
+  <!-- form for user to select a song -->
+  <form>
+  	<label for="verse-choose">Choose a song</label>
+  	<select id="verse-choose" name="verse-choose">
+  		<option>Dog Days Are Over</option>
+  		<option>What the Water Gave Me</option>
+  		<option>What Kind of Man</option>
+  		<option>Hunger</option>
+  	</select>
+  </form>
+
+  <!-- iframe to show the music video -->
+  <iframe id="mvFrame" width="560" height="315" src="https://www.youtube.com/embed/iWOyfLBYtuU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <!-- the lyrics will go in here -->
+  <pre>
+
+  </pre>
+
+  <script>
+var songChoose = document.querySelector('select');
+var lyricsDisplay = document.querySelector('pre');
+
+songChoose.onchange = function(){
+  var song = songChoose.value;
+  updateVid(song);
+  updateDisplay(song);
+};
+
+// this function replaces the space inside the text in option tag with _,
+// lowercase everything
+// and adds a .txt file extension
+// then allows the page to be updated without having to refresh
+function updateDisplay(song){
+  /*
+  // this works too!
+  song = song.replace(/ /g, '');
+  song = song.toLowerCase();
+  song += '.txt';
+  var url = song;
+  */
+  // used regax to replace all the spaces with _
+  var url = song.replace(/ /g, '_').toLowerCase() + '.txt';
+  // should show the url in console
+  console.log(url);
+
+  // function(response) pass as a parameter
+  fetch(url).then(function(response){
+    // returns the response as raw text
+    response.text().then(function(text){
+      // textContent returns the content within pre tag
+      lyricsDisplay.textContent = text;
+    });
+  });
+};
+
+// this function update the mv being shown according to different song chosen
+function updateVid(song){
+  if (song === 'Dog Days Are Over'){
+    document.getElementById("mvFrame").src = "https://www.youtube.com/embed/iWOyfLBYtuU";
+  }
+  else if (song === 'What the Water Gave Me'){
+    document.getElementById("mvFrame").src = "https://www.youtube.com/embed/am6rArVPip8";
+  }
+  else if (song === 'What Kind of Man'){
+    document.getElementById("mvFrame").src = "https://www.youtube.com/embed/XgeKHTcufLY";
+  }
+  else if (song === 'Hunger'){
+    document.getElementById("mvFrame").src = "https://www.youtube.com/embed/5GHXEGz3PJg";
+  }
+
+}
+
+// this is for aesthetic choice
+// so that when first load the page, first lyrics & mv are up there
+updateVid('Dog Days Are Over');
+updateDisplay('Dog Days Are Over');
+songChoose.value = 'Dog Days Are Over';
+        
+  </script>
+
+</body>
+</html>
