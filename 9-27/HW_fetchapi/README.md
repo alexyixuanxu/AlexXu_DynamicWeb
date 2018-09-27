@@ -1,0 +1,1 @@
+This assignment fetches from an api https://aws.random.cat/meow and returns to this page a random cat photo.
