@@ -7,6 +7,7 @@ This app takes two variables in its path, a shape including:
 - triangle
 - circle
 - square
+
 and a positive integer.
 
 When user input is valid, user will be redirected to a page which uses P5.js to draw the according number of the different shapes in the JSON file onto the webpage.
