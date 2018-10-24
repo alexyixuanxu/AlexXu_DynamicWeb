@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shapes Shapes Shapes</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+	<script>
+let shapes;
+let size = 300;
+let pos = 800;
+
+function preload(){
+	shapes = loadJSON('records.json');
+	console.log(shapes);
+}
+
+function setup(){
+	createCanvas(pos, pos);
+	noLoop();
+	noStroke();
+}
+
+function draw(){
+	background(0);
+	// iterate through json object
+	// 'circle', 'ellipse', 'rectangle', 'square', 'triangle'
+	for (let i in shapes){
+		fill(random(255), random(255), random(255), random(150));
+		// currentNum is shapes[i];
+		if (i === 'circle'){
+			let cirR = random(size);
+			for (let j=0; j<shapes[i]; j++){
+				ellipse(random(pos), random(pos), cirR, cirR);
+			}
+		}
+		else if (i === 'ellipse'){
+			for (let j=0; j<shapes[i]; j++){
+				ellipse(random(pos), random(pos), random(size), random(size));
+			}
+		}
+		else if (i === 'rectangle'){
+			for (let j=0; j<shapes[i]; j++){
+				rect(random(pos), random(pos), random(size), random(size));
+			}
+		}
+		else if (i === 'square'){
+			let sqrSize = random(size);
+			for (let j=0; j<shapes[i]; j++){
+				rect(random(pos), random(pos), sqrSize, sqrSize);
+			}
+		}
+		else if (i === 'triangle'){
+			for (let j=0; j<shapes[i]; j++){
+				triangle(random(pos), random(pos), random(pos), random(pos), random(pos), random(pos))
+			}
+		}
+	}
+}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
