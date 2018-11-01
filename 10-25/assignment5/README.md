@@ -21,7 +21,7 @@ This app uses Node.js, file system module and Express framework.
 3. In your terminal, navigate to your directory that contain the respository and type in `npm install express` to install the package.
 
 ## Run & Test the App
-In your terminal, navigate to the directory containing the files, and type `node app.js` to run the bot. It should start a server at `localhost/3000`.
+In your terminal, navigate to the directory containing the files, and type `node app.js` to run the app. It should start a server at `localhost/3000`.
 
 Here are some paths to test:
 - `/YourShape/YourNumber`, if valid, it will redirect into `/sketch.html`.
