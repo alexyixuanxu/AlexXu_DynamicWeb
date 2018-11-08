@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shiba Or Cat? | Sign Up</title>
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+  </head>
+  
+  <style type="text/css">
+  *{
+  	font-family: 'Poor Story', cursive;
+  	font-size: 22px;
+  }
+  body{
+  	background-color: ivory;
+  	width: 600px;
+  	margin: 0 auto;
+  }	
+  h1{
+  	text-align: center;
+  	font-size: 42px;
+  }
+  form{
+  	margin: 5px auto;
+  }
+  input{
+  	margin: 5px auto;
+  	font-size: 18px;
+  }
+  p{
+    margin: 2px 0;
+  }
+
+  </style>
+
+  <body>
+  	<h1>Sign Up</h1>
+  	<p>Sign up to vote for...shiba or cat!</p>
+    <!-- post request here! get & post method to a form -->
+    <form action="/" method="post">
+      <p>Username</p>
+      <input type="text" name="username" placeholder=" Your Username"><br>
+      <p>Password</p>
+      <input type="password" name="password" placeholder=" Your Password"><br>
+      <p>Confirm Password</p>
+      <input type="password" name="confirm_password" placeholder=" Your Password Again"><br>
+      <input type="submit">
+    </form>
+
+    <!-- if succeed, display message -->
+    <% if (success !== null){ %>
+    <p><%= success %></p>
+    <p>Proceed to <a href="/login">Log In</a>.</p>
+    <% } %>
+
+    <!-- if error, display error message -->
+    <% if (error !== null){ %>
+    <p><%= error %></p>
+    <% } %> 
+
+    <br>
+    <p>Already signed up? Proceed to <a href="/login">Log In</a>...</p>
+
+
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shiba Or Cat? | Log In</title>
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+  </head>
+  
+  <style type="text/css">
+  *{
+  	font-family: 'Poor Story', cursive;
+  	font-size: 22px;
+  }
+  body{
+  	background-color: ivory;
+  	width: 600px;
+  	margin: 0 auto;
+  }	
+  h1{
+  	text-align: center;
+  	font-size: 42px;
+  }
+  form{
+  	margin: 5px auto;
+  }
+  input{
+  	margin: 5px auto;
+  	font-size: 18px;
+  }
+  p{
+    margin: 2px 0;
+  }
+  </style>
+
+  <body>
+  	<h1>Log In</h1>
+  	<p>Log in to vote for...shiba or cat!</p>
+    <!-- post request here! get & post method to a form -->
+    <form action="/login" method="post">
+      <p>Username</p>
+      <input type="text" name="username" placeholder=" Your Username"><br>
+      <p>Password</p>
+      <input type="password" name="password" placeholder=" Your Password"><br>
+      <input type="submit">
+    </form>
+
+    <% if (error !== null){ %>
+    <p><%= error %></p>
+    <% } %> 
+
+    <br>
+    <p>Haven't signed up? Go to <a href="/">Sign Up</a>...</p>
+
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shiba Or Cat?</title>
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+  </head>
+  
+  <style type="text/css">
+  *{
+  	font-family: 'Poor Story', cursive;
+  	font-size: 22px;
+  }
+  body{
+  	background-color: ivory;
+  	width: 600px;
+  	margin: 0 auto;
+  }	
+  h1{
+  	text-align: center;
+  	font-size: 42px;
+  }
+  form{
+  	margin: 5px auto;
+  }
+  input{
+  	margin: 5px auto;
+  	font-size: 18px;
+  }
+  img{
+  	width: 100%;
+  	height: auto;
+  	margin: 10px auto;
+  }
+  </style>
+
+  <body>
+  	<h1>Shiba or Cat?</h1>
+  	<p>Make a choice and put down a number (1-100) to see that many images of the creature of your choice!</p>
+    <!-- post request here! get & post method to a form -->
+    <form action="/vote" method="post">
+      <input type="radio" name="pet" value="cats"> Cat<br>
+      <input type="radio" name="pet" value="shibes"> Shiba<br>
+      <input name="num" type="text" placeholder=" number 1-100"><br>
+      <input type="submit">
+    </form>
+    <!-- if img links array is given -->
+    <% if(imgLinksArr !== null){ %>
+    <p><%= userInput.num + ' ' + userInput.pet + '...'%></p>
+    <!-- loop through img links array and display images -->
+    <% for(let i=0; i<imgLinksArr.length; i++){ %>
+    <img src="<%= imgLinksArr[i] %>">
+    <% } %>
+    <% } %>
+
+    <% if(error !== null){ %>
+      <p><%= error %></p>
+    <% } %>
+
+  </body>
+</html>
